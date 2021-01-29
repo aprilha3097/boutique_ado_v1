@@ -18,7 +18,7 @@ def bag_contents(request):
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'product': product
+            'product': product,
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -39,5 +39,5 @@ def bag_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
-    # everything available in the context will be available in every template
+
     return context
